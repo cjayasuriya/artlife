@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 15, 2019 1:47:57 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Pojos.Purchase" table="purchase" catalog="artlife">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="users" class="Pojos.Users" fetch="select">
+            <column name="users_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="addresses" class="Pojos.Addresses" fetch="select">
+            <column name="addresses_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="products" class="Pojos.Products" fetch="select">
+            <column name="products_id" not-null="true" />
+        </many-to-one>
+        <property name="quantity" type="java.lang.Integer">
+            <column name="quantity" />
+        </property>
+        <property name="telephones" type="string">
+            <column name="telephones" length="65535" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="65535" />
+        </property>
+        <property name="shippingNames" type="string">
+            <column name="shipping_names" length="65535" />
+        </property>
+        <property name="billingNames" type="string">
+            <column name="billing_names" length="65535" />
+        </property>
+        <property name="meta" type="string">
+            <column name="meta" length="65535" />
+        </property>
+        <property name="purchasedAt" type="timestamp">
+            <column name="purchased_at" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

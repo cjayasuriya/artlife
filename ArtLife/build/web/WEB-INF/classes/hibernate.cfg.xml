@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/artlife?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <mapping resource="Pojos/LoginDetails.hbm.xml"/>
+    <mapping resource="Pojos/Addresses.hbm.xml"/>
+    <mapping resource="Pojos/Country.hbm.xml"/>
+    <mapping resource="Pojos/Users.hbm.xml"/>
+    <mapping resource="Pojos/Categories.hbm.xml"/>
+    <mapping resource="Pojos/Orders.hbm.xml"/>
+    <mapping resource="Pojos/OrderStatus.hbm.xml"/>
+    <mapping resource="Pojos/Products.hbm.xml"/>
+    <mapping resource="Pojos/ShopBag.hbm.xml"/>
+    <mapping resource="Pojos/Purchase.hbm.xml"/>
+    <mapping resource="Pojos/Stock.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
